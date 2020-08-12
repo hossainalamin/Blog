@@ -1,0 +1,81 @@
+    .headersection,
+    .footersection {
+        background: green none repeat scroll 0 0;
+    }
+
+    .icon a {
+        background: #2d9d2d none repeat scroll 0 0;
+    }
+
+    .searchbtn input[type="text"] {
+        border: 1px solid #A56E0A;
+        width: 200px;
+        background: #FFE07C;
+        font-size: 16px;
+        height: 30px;
+    }
+    .searchbtn input[type="text"] {
+        border: 1px solid #2d9d2d;
+        width: 200px;
+        background: #2D9D3E;
+        
+    }
+
+    .searchbtn input[type="submit"] {
+        border: 1px solid #2d9d3d;
+        background: #2d9d3d none repeat scroll 0 0;
+
+    }
+
+    .searchbtn input[type="submit"]:hover {
+        background: #2d9d2d none repeat scroll 0 0;
+        border: 1px solid #2d9d3d;
+    }
+
+    .navsection {
+        background: none repeat scroll 0 0 #2d9d3d;
+    }
+
+    .navsection ul li {
+        border-left: 1px solid #2d9d2d;
+        border-right: 1px solid #2d9d2d;
+    }
+
+    .samepost h2 a,
+    .about h2 {
+        color: #2d9d3d;
+    }
+
+    .maincontent {
+        background: #C9FFC9 none repeat scroll 0 0;
+
+    }
+
+    .contentsection {
+        background: #ffffff none repeat scroll 0 0;
+        border: 1px solid #C9FFC9;
+    }
+
+    .sidebar {
+        background: #C9FFC9 none repeat scroll 0 0;
+        border: 1px solid #C9FFC9;
+
+    }
+
+    .samesidebar h2 {
+        background: #2d9d2d none repeat scroll 0 0;
+        border-bottom: 2px solid #2d9d3d;
+    }
+
+    .pagination a {
+        background: #2d9d3d;
+        border: 1px solid black;
+        color: #333;
+
+    }
+
+    .relatedpost h2 {
+        background: #2d9d3d;
+        border: 1px solid #2d9d3d;
+
+    }
