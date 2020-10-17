@@ -17,7 +17,7 @@ session::CheckLogin();
 <body>
     <div class="container">
         <section id="content">
-            <?php
+        <?php
         if($_SERVER['REQUEST_METHOD'] == 'POST')
         {
             $email  = $fm->validation($_POST['email']);
@@ -34,45 +34,28 @@ session::CheckLogin();
             {
                 foreach($mailcheck as $data)
                 {
-                    $userid = $data['id'];
-                    $username = $data['username'];
+                    $rec_pass  = $data['password'];
+					$username  = $data['username'];
+					$headers = "From: csejnu33@gmail.com"; 
+					$subject = "Password recovery.";
+					$body = "Your user name :$username And password is :$rec_pass";
+					$sentmail = mail($email, $subject, $body, $headers);
+					if($sentmail)
+					{
+						echo "<span style='color:green;font-size=18px;'>Password sent to your.$email</span>";
+					} 
+                    else
+                    {
+                        echo "<span style='color:red;font-size=18px;'>Mail Not sent.</span>";
+                    }
                 }
-                $text  = substr($email,0,3);
-                $rand  = rand(10000,99999);
-                $newpass ='$text$rand';
-                $pass =md5($newpass);
-                $sql = "update tbl_user
-                        set 
-                        password = '$newpass'
-                        where id = '$userid'";
-                $result = $db->update($sql);
-                $to = '$email';
-                $from = "alamin@gmail.com";
-                $headers = 'From: $from'. "\r\n" .
-                'Reply-To: alamin@gmail.com' . "\r\n" .
-                'X-Mailer: PHP/' . phpversion();
-                $subject = 'Your lost password';
-                $message = "Your user name ".$username."And password is ".$pass;
-                $sentmail = mail($to, $subject, $message, $headers);
-                if($sentmail)
-                {
-                    echo "<span style='color:green;font-size=18px;'>Password sent to your mail..</span>";
-                    
-                }
-                else
-                {
-                    echo "<span style='color:red;font-size=18px;'>Mail Not sent.</span>";
-
-                }
-
             }
             else
             {
                 echo "<span style='color:red;font-size=18px;'>Mail Not found..</span>";
             }
             }
-        }
-        
+    }
             
     ?>
             <form action="" method="post">
