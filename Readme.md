@@ -9,7 +9,7 @@ This, a simple blog template,is made fully dynamic using php and mysql database
 <li>user Search Option</li>
 <li>Reply message option</li>
 <li>Add different type of users</li>
-<li>Forget password change option</li>
+<li>Forget password send via mail</li>
 <li>Profile update option</li>
 <li>change theme option</li>
 <li>Add catagory option </li>
